@@ -19,7 +19,7 @@ console.log(data)
 class App extends Component {
   componentDidMount() {
     Promise.all(
-      Object.values(data).map(url => window.fetch(url).then(response.text()))
+      Object.values(data).map(url => window.fetch(url).then(res => res.text()))
     )
     .then(console.log)
   }
